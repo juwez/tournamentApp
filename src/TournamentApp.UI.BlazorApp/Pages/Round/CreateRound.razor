@@ -1,0 +1,17 @@
+﻿@page "/rounds/create"
+
+<h1>ZieHier een forumulier dat nog niet bestaat om een speler te maken</h1>
+
+
+@*
+<EditForm Model= OnValidSubmit=@InsertPerson>
+    
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+        <p>@StatusMessage</p>
+        <div class="form-group">
+        <label for="name">name</label>
+            <InputText type="text" class="form-control" id="name" aria-describedby="name" placeholder="Wat is de naam?" @bind-Value="@PlayerViewModel.Name"/>
+            <ValidationMessage For="@(() => PlayerViewModel.Name)" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>*@

@@ -1,0 +1,19 @@
+﻿@inherits FetchDataBase
+@page "/fetchdata"
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (ViewModel == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <p>@ViewModel.TournamentName</p>
+    <p>@ViewModel.Key</p>
+    <p>@ViewModel.Date</p>
+
+}

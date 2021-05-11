@@ -1,0 +1,16 @@
+﻿@inherits CreatePlayerBase
+@page "/players/create"
+
+<EditForm Model=@PlayerViewModel OnValidSubmit=@InsertPerson>
+    
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+        <p>@StatusMessage</p>
+        <div class="form-group">
+        <label for="name">name</label>
+            <InputText type="text" class="form-control" id="name" aria-describedby="name" placeholder="Wat is de naam?" @bind-Value="@PlayerViewModel.Name"/>
+            <ValidationMessage For="@(() => PlayerViewModel.Name)" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+

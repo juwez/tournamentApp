@@ -1,0 +1,34 @@
+﻿@inherits DeleteAllSubRoundsBase
+
+@page "/remove/tournaments/{tournamentKey}/rounds/{roundkey}"
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (Model == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                  
+            </div>
+            <div class="col-sm">
+                <h1>Are you sure you want to delete @Model.RoundName and zijn sub rondes?</h1>
+                <p>This process can not be undone.</p>
+                <a href="/tournaments" class="btn btn-primary">Terug naar alle Wedstrijden</a>
+                <button type="button" class="btn btn-danger" @onclick="(() => DeleteSubRounds(TournamentKey, Roundkey))">Verwijder @Model.RoundName</button>
+            </div>
+            <div class="col-sm">
+                  
+            </div>
+            
+        </div>
+        
+    </div>
+
+}

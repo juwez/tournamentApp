@@ -1,0 +1,12 @@
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\bin\Debug\netcoreapp3.1\TournamentApp.Repository.deps.json
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\bin\Debug\netcoreapp3.1\TournamentApp.Repository.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\bin\Debug\netcoreapp3.1\TournamentApp.Repository.pdb
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\bin\Debug\netcoreapp3.1\TournamentApp.Model.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\bin\Debug\netcoreapp3.1\TournamentApp.Model.pdb
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\obj\Debug\netcoreapp3.1\TournamentApp.Repository.csprojAssemblyReference.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\obj\Debug\netcoreapp3.1\TournamentApp.Repository.AssemblyInfoInputs.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\obj\Debug\netcoreapp3.1\TournamentApp.Repository.AssemblyInfo.cs
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\obj\Debug\netcoreapp3.1\TournamentApp.Repository.csproj.CoreCompileInputs.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\obj\Debug\netcoreapp3.1\TournamentApp.Repository.csproj.CopyComplete
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\obj\Debug\netcoreapp3.1\TournamentApp.Repository.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Repository\obj\Debug\netcoreapp3.1\TournamentApp.Repository.pdb

@@ -1,0 +1,61 @@
+﻿@inherits GetMatchBase
+@page "/tournaments/{tournamentkey}/rounds/{roundkey}/matches/{MatchKey}"
+
+@if (PlayerMatchViewModel == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <h1>De wedstrijd tussen @PlayerMatchViewModel.Player1.Name en @PlayerMatchViewModel.Player2.Name</h1>
+        </div>
+        @if (ClickedSendScoreButton)
+        {
+            <div class="row">
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    <p>@TextInPopup</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        }
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Score voor @PlayerMatchViewModel.Player1.Name</h2>
+                <div class="row">
+                    <i class="fa fa-arrow-up fa-5x" @onclick="@(e => UpdateScore("player1", "up"))" aria-hidden="true"></i>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <h3>@MatchViewModel.ScorePlayer1</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <i class="fa fa-arrow-down fa-5x" @onclick="@(e => UpdateScore("player1", "down"))" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h2>Score voor @PlayerMatchViewModel.Player2.Name</h2>
+                <div class="row">
+                    <i class="fa fa-arrow-up fa-5x" @onclick="@(e => UpdateScore("player2", "up"))" aria-hidden="true"></i>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <h3 class="ml-5">@MatchViewModel.ScorePlayer2</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <i class="fa fa-arrow-down fa-5x" @onclick="@(e => UpdateScore("player2", "down"))" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-success btn-lg btn-block mt-3" @onclick="@(e => FinishMatch())">Beingdig de match</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block mt-3" @onclick="@(e => SendScoreToApi())">Update score</button>
+        </div>
+    </div>
+
+}

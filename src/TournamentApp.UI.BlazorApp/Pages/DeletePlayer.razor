@@ -1,0 +1,35 @@
+﻿@inherits DeletePlayerBase
+@page "/players/remove/{key}"
+
+<h1>ZieHier alle Spelers</h1>
+
+
+@if (BasePlayerViewModel == null)
+{
+    <div class="spinner"></div>
+}
+else
+{   
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                  
+            </div>
+            <div class="col-sm">
+                <h1>Are you sure you want to delete @BasePlayerViewModel.Name</h1>
+                <p>This process can not be undone.</p>
+                <a href="/players" class="btn btn-primary">Terug naar alle Spelers</a>
+                <button type="button" class="btn btn-danger" @onclick="(() => DeletePlayer(Key))">Verwijder @BasePlayerViewModel.Name</button>
+            </div>
+            <div class="col-sm">
+                  
+            </div>
+            
+        </div>
+        
+    </div>
+    
+
+  
+
+}

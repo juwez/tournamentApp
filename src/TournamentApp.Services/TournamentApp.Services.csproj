@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TournamentApp.Model\TournamentApp.Model.csproj" />
+      <ProjectReference Include="..\TournamentApp.Repository\TournamentApp.Repository.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="9.0.0" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+      <PackageReference Include="FirebaseDatabase.net" Version="4.0.4" />
+      <PackageReference Include="Kaos.Combinatorics" Version="5.0.0" />
+    </ItemGroup>
+
+</Project>

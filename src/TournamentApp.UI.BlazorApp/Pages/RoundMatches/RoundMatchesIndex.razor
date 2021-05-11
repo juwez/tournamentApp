@@ -1,0 +1,119 @@
+﻿@inherits RoundMatchesIndexGetRoundBase
+@page "/tournaments/{tournamentkey}/rounds/{roundKey}"
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <h1>info</h1>
+        </div>
+        <div class="col-sm-7">
+            <h1>Matches van de ronde</h1>
+        </div>
+        <div class="col-sm-3">
+            <h1>SubRoundes</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+        
+            @if (TournamentRoundViewModel == null)
+            {
+                <p>Data is aan het laden...</p>
+            }
+            else
+            {
+                <article>
+                    <p>Rondenaam:</p>
+                    <p>@TournamentRoundViewModel.RoundName</p>
+                </article>
+                <article>
+                    <p>RondeSleutel:</p>
+                    <p>@TournamentRoundViewModel.RoundKey</p>
+                </article>
+                <article>
+                    <p>Wedstrijdnaam</p>
+                    <p>@TournamentRoundViewModel.TournamentName</p>
+                </article>
+            }
+
+        </div>
+        <div class="col-sm-7"> 
+        @if (Matches == null)
+        {
+            <div class="spinner"></div>
+        }
+        else
+        {
+            <table class="table">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First player</th>
+                    <th scope="col">Second Player</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Link naar de Match</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var match in Matches)
+                {
+                    <tr>
+                        <th scope="row">@match.Key</th>
+                        <td>@match.Player1.Name</td>
+                        <td>@match.Player2.Name</td>
+                        <td>@match.ScorePlayer1 - @match.ScorePlayer2</td>
+                        @if (match.IsMatchPlayed)
+                        {
+                            <td><a class="btn btn-danger disabled" ><p class="font-weight-bold">Wedstrijd is gespeeld!</p></a></td>
+                        }
+                        else
+                        {
+                            <td><a href="tournaments/@Tournamentkey/rounds/@RoundKey/matches/@match.Key" class="btn btn-info">Update the score!</a></td>
+                        }
+                       
+                    </tr>
+
+                }
+                </tbody>
+            </table>
+            @if (IsEveryMatchPlayed)
+            {
+                <button type="button" class="btn btn-primary" @onclick="@(e => FinishRound())">Beëindig deze ronde</button>
+            }
+            
+        }
+        </div>
+        @if (SubRounds == null)
+        {
+            <p>Data is aan het laden...</p>
+        }
+        else
+        {
+            @if (SubRounds.Count == 0)
+            {
+                <p>Er zijn geen SubRoundes meer!</p>
+            }
+            else
+            {
+                @foreach (var round in SubRounds)
+                {
+                    <div class="col-sm-3">
+                        <div class="card mt-3 mr-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">@round.RoundName</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">@round.Key</h6>
+                                <p class="card-text">
+                                    I => Details van de ronde,<br>
+                                    Trash => Verwijderen van de ronde <br>
+                                    Subroundes => De subroundes <br>
+                                </p>
+                                <button type="button" class="btn btn-info" @onclick="(() => ReloadPageWithNewData(round.Key))"> Ga naar deze ronde </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>

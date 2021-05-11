@@ -1,0 +1,75 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\joey\\Downloads\\TournamentApp\\src\\TournamentApp.UI.BlazorApp\\TournamentApp.UI.BlazorApp.csproj",
+    "projectName": "TournamentApp.UI.BlazorApp",
+    "projectPath": "C:\\Users\\joey\\Downloads\\TournamentApp\\src\\TournamentApp.UI.BlazorApp\\TournamentApp.UI.BlazorApp.csproj",
+    "outputPath": "C:\\Users\\joey\\Downloads\\TournamentApp\\src\\TournamentApp.UI.BlazorApp\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Microsoft\\Xamarin\\NuGet"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {
+          "C:\\Users\\joey\\Downloads\\TournamentApp\\src\\TournamentApp.Model\\TournamentApp.Model.csproj": {
+            "projectPath": "C:\\Users\\joey\\Downloads\\TournamentApp\\src\\TournamentApp.Model\\TournamentApp.Model.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "AutoMapper": {
+          "target": "Package",
+          "version": "[10.0.0, )"
+        },
+        "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[8.0.1, )"
+        },
+        "Kaos.Combinatorics": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "target": "Package",
+          "version": "[3.1.3, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+    }
+  }
+}

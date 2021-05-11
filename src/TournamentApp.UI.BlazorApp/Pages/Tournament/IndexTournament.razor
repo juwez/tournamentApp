@@ -1,0 +1,39 @@
+﻿@inherits TournamentApp.UI.BlazorApp.Pages.Code.TournamentService.IndexTournamentBase
+@page "/tournaments"
+
+<h1>Kijk hier naar alle wedstrijden</h1>
+
+
+@if (Tournaments == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="/tournaments/create"><i class="fas fa-plus fa-3x"></i></a>
+
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach (var tournament in Tournaments)
+            {
+                <div class="col-sm-4 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@tournament.TournamentName</h5>
+                            <p class="card-text">@tournament.Date</p>
+                            <a href="/tournaments/@tournament.Key" class="btn btn-primary">Details</a>
+                            <a href="/tournaments/@tournament.Key" class="btn btn-info">Update</a>
+                            <a href="/tournaments/remove/@tournament.Key" class="btn btn-danger">remove</a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,40 @@
+﻿@inherits IndexPlayersBase
+@page "/players"
+
+<h1>Zie Hier alle Spelers</h1>
+
+
+@if (PlayerList == null)
+{
+    <div class="spinner"></div>
+}
+else
+{   
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="/players/create"><i class="fas fa-plus fa-3x"></i></a>
+                
+            </div>
+           
+        </div>
+        <div class="row">
+            @foreach (var playerViewModel in PlayerList)
+            {
+                <div class="card mr-3 mb-3" style="width: 18rem;">
+                    <img class="card-img-top" src="https://c8.alamy.com/comp/P9MYWR/man-avatar-profile-P9MYWR.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@playerViewModel.Name</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="/players/remove/@playerViewModel.Key"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+                        
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    
+
+  
+
+}

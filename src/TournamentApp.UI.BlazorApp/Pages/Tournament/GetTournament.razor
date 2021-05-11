@@ -1,0 +1,45 @@
+﻿@inherits GetTournamentBase
+@page "/tournaments/{key}"
+
+
+@if (TournamentViewModel == null && Rounds == null)
+{
+    <div class="spinner"></div>
+
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                                         
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <h1 class="mr-5">Ziehier alle hoofdroundes voor @TournamentViewModel.TournamentName</h1>
+                </div>
+                <div class="row">
+                    @foreach (var item in Rounds)
+                    {
+                        <div class="card mt-3 mr-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.RoundName</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">@item.Key</h6>
+                                <p class="card-text">
+                                I => Details van de ronde,<br>
+                                    Trash => Verwijderen van de ronde <br>
+                                    Subroundes => De subroundes <br>
+                                </p>
+                                <a href="/tournaments/@item.TournamentKey/rounds/@item.Key" class="btn btn-info"><i class="fas fa-info-circle fa-2x"></i></a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+

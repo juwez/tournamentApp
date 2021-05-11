@@ -1,0 +1,29 @@
+﻿@inherits TournamentApp.UI.BlazorApp.Pages.Code.TournamentService.DeleteTournamentBase
+@page "/tournaments/remove/{key}"
+
+@if (TournamentViewModel == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                  
+                </div>
+                <div class="col-sm">
+                    <h1>Are you sure you want to delete @TournamentViewModel.TournamentName</h1>
+                    <p>This process can not be undone.</p>
+                    <a href="/tournaments" class="btn btn-primary">Terug naar alle wedstrijden</a>
+                    <button type="button" class="btn btn-danger" @onclick="(() => DeleteTournament(Key))">Danger</button>
+                </div>
+                <div class="col-sm">
+                  
+                </div>
+            
+        </div>
+        
+    </div>
+ 
+}

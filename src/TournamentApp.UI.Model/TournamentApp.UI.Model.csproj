@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TournamentApp.Model\TournamentApp.Model.csproj" />
+    <ProjectReference Include="..\TournamentApp.Repository\TournamentApp.Repository.csproj" />
+    <ProjectReference Include="..\TournamentApp.Services\TournamentApp.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Kaos.Combinatorics" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,52 @@
+﻿@using TournamentApp.Model
+@using Microsoft.CodeAnalysis.Options
+@inherits CreateTournamentBase
+@page "/tournaments/create"
+
+<h1>Maak hier je wedstrijd!</h1>
+
+
+@if (Players == null)
+{
+    <div class="spinner"></div>
+}
+else{
+<EditForm Model="@TournamentViewModel" OnValidSubmit="@CreateTournament">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group">
+        <label>
+            <span class="label-text">Wedstrijd naam</span>
+        </label>
+        <InputText type="text" class="form-control" id="name" aria-describedby="name" placeholder="Wat is de wedstrijdnaam?" @bind-Value="@TournamentViewModel.TournamentName"/>
+    </div>
+    @*players to add*@
+    <div class="form-group">
+        <label for="PlayerSelect">players</label>
+        
+        <select id="PlayerSelect" class="form-control" @onchange="OnPersonSelected">
+            @*todo clean this up general code and bug*@
+            <option value="empty"></option>
+            @foreach (var player in Players)
+            {
+                <option value="@player.Key">@player.Name</option>
+            }
+        </select>
+    </div>
+        @*players who are playing*@
+    <div class="form-group">
+       @if (currentPlayers != null)
+       {
+           <ul id="currentPlayers">
+               @foreach (var currentPlayer in currentPlayers)
+               {
+                   <li @onclick="(() => DeletePlayerFromCurrentPlayers(currentPlayer.Key))"><i class="fas fa-trash-alt"></i>@currentPlayer.Name</li>
+               }
+           </ul>
+       }
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+
+
+}

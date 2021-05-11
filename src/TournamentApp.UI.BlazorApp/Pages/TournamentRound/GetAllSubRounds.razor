@@ -1,0 +1,55 @@
+﻿@inherits GetAllSubRoundsBase
+@page "/tournaments/{tournamentKey}/rounds/{roundkey}/djsldkfj"
+
+
+@if (MainRound == null && Subrounds == null && TournamentViewModel == null)
+{
+    <div class="spinner"></div>
+    
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                <h1>@MainRound.RoundName</h1>
+                <p>@MainRound.TournamentKey</p>
+            </div>
+            <div class="col-xs-2">
+                                         
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <h1 class="mr-5">Ziehier alle SubRoundes voor @TournamentViewModel.TournamentName!</h1>
+                    
+                </div>
+                <div class="row">
+                    @if (Subrounds.Count == 0)
+                    {
+                        <p>Voor deze wedstrijd zijn er nog geen SubRoundes</p>}
+                    else
+                    {
+                        @foreach (var item in Subrounds)
+                        {
+                            <div class="card mt-3 mr-3" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title"> @item.RoundName</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"> @item.Key</h6 >
+                                    <p class="card-text"> Klik op details voor alle details te zien van deze ronde.Including the subroundes</p >
+                                    <a href="#" class="btn btn-info"> Details Van deze ronde </a >
+                                    <a href="#" class="card-link"> Een andere link </a>
+                                    <a href="/remove/tournaments/@TournamentKey/rounds/@Roundkey"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+}
+
+

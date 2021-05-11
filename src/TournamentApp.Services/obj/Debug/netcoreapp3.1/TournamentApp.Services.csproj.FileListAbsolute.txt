@@ -1,0 +1,14 @@
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\bin\Debug\netcoreapp3.1\TournamentApp.Services.deps.json
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\bin\Debug\netcoreapp3.1\TournamentApp.Services.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\bin\Debug\netcoreapp3.1\TournamentApp.Services.pdb
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\bin\Debug\netcoreapp3.1\TournamentApp.Model.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\bin\Debug\netcoreapp3.1\TournamentApp.Repository.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\bin\Debug\netcoreapp3.1\TournamentApp.Model.pdb
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\bin\Debug\netcoreapp3.1\TournamentApp.Repository.pdb
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\obj\Debug\netcoreapp3.1\TournamentApp.Services.csprojAssemblyReference.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\obj\Debug\netcoreapp3.1\TournamentApp.Services.AssemblyInfoInputs.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\obj\Debug\netcoreapp3.1\TournamentApp.Services.AssemblyInfo.cs
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\obj\Debug\netcoreapp3.1\TournamentApp.Services.csproj.CoreCompileInputs.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\obj\Debug\netcoreapp3.1\TournamentApp.Services.csproj.CopyComplete
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\obj\Debug\netcoreapp3.1\TournamentApp.Services.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Services\obj\Debug\netcoreapp3.1\TournamentApp.Services.pdb

@@ -1,0 +1,9 @@
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\bin\Debug\netcoreapp3.1\TournamentApp.Model.deps.json
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\bin\Debug\netcoreapp3.1\TournamentApp.Model.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\bin\Debug\netcoreapp3.1\TournamentApp.Model.pdb
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\obj\Debug\netcoreapp3.1\TournamentApp.Model.csprojAssemblyReference.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\obj\Debug\netcoreapp3.1\TournamentApp.Model.AssemblyInfoInputs.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\obj\Debug\netcoreapp3.1\TournamentApp.Model.AssemblyInfo.cs
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\obj\Debug\netcoreapp3.1\TournamentApp.Model.csproj.CoreCompileInputs.cache
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\obj\Debug\netcoreapp3.1\TournamentApp.Model.dll
+C:\Users\joey\Downloads\TournamentApp\src\TournamentApp.Model\obj\Debug\netcoreapp3.1\TournamentApp.Model.pdb
